@@ -115,7 +115,7 @@ const Forms = () => {
         <div style={{color:"red"}}>{alert.email}</div>
       </label>
       <label htmlFor="">
-        <input type="number" name='phoneNo' value={formData.phoneNo} onChange={handleChange} onFocus={()=>handleFocue("phoneNo")} style={{borderColor: focus.phoneNo ? "blue":"gray" , outline:"none"}} placeholder='Enter Your Phone Number' />
+        <input type="number" name='phoneNo' pattern="\d{10,}" required value={formData.phoneNo} onChange={handleChange} onFocus={()=>handleFocue("phoneNo")} style={{borderColor: focus.phoneNo ? "blue":"gray" , outline:"none"}} placeholder='Enter Your Phone Number' />
         <div style={{color:"red"}}>{alert.phoneNo}</div>
       </label>
       <input type="submit" value={"Register"}  />
